@@ -1,0 +1,14 @@
+{ 
+	 // Place your snippets for JSON here. Each snippet is defined under a snippet name and has a prefix, body and 
+	 // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	 // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	 // same ids are connected.
+	 // Example:
+	 "Open the HTML in Explorer": {
+		"prefix": "evoopenWithExplorer",
+		"body": [
+			"\"version\": \"0.1.0\",\n \"command\": \"Chrome\",\n  \"osx\": { \n   \"command\": \"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" \n}, \n  \"args\": [\n\"$${{file}}\" \n]"
+		],
+		"description": "Configure the json —— Open html file with explorer"
+	} 
+}

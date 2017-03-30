@@ -1,0 +1,231 @@
+{
+	// Place your snippets for JavaScript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	"console.log": {
+		"prefix": "evolog",
+		"body": [
+			"console.log($1)"
+		],
+		"description": "Log output to console"
+	},
+	"console.dir": {
+		"prefix": "evodir",
+		"body": [
+			"console.dir($1)"
+		],
+		"description": "Log output to console"
+	},
+	"console.table": {
+		"prefix": "evotable",
+		"body": [
+			"console.table($0);"
+		],
+		"description": "Log output to console"
+	}
+	/******** Base Func ********/
+	,
+	"If": {
+		"prefix": "evoif",
+		"body": [
+			"if (${1}) {\n  ${0}\n}"
+		],
+		"description": "Self If Statement"
+	},
+	"Add Listener": {
+		"prefix": "evoaddEventListener",
+		"body": [
+			"${1}.addEventListener('${2}', ${0: handleFunc})"
+		],
+		"description": "Self AddEventListener"
+	},
+	"QuerySelector": {
+		"prefix": "evoDocQuery",
+		"body": [
+			"document.querySelector('${0}');"
+		],
+		"description": "document.querySelector()"
+	},
+	"QuerySelectorAll": {
+		"prefix": "evoDocQueryAll",
+		"body": [
+			"document.querySelectorAll('${0}');"
+		],
+		"description": "document.querySelectorAll()"
+	},
+	"EleQuerySelector": {
+		"prefix": "evoquery",
+		"body": [
+			"${1}.querySelector('${0}');"
+		],
+		"description": "document.querySelector()"
+	},
+	"EleQuerySelectorAll": {
+		"prefix": "evoqueryAll",
+		"body": [
+			"${1}.querySelectorAll('${0}');"
+		],
+		"description": "document.querySelectorAll()"
+	}
+	/*** 
+	** React 
+	***/
+	/******** Class Template ********/
+	,
+	"classForReactDefaultExport-ES6": {
+		"prefix": "evoClassForReactDefault-ES6",
+		"body": [
+			"import React from 'react';\n\nexport default class ${1:ComponentName} extends React.Component {\n\n  render() {\n    return (\n      <div>${0}</div>\n    );\n  } \n\n}"
+		],
+		"description": "React`s export default class template"
+	},
+	"classForReactNamedExport-ES6": {
+		"prefix": "evoClassForReactNamed-ES6",
+		"body": [
+			"import React from 'react';\n\nclass ${1:ComponentName} extends React.Component {\n\n  render() {\n    return (\n      <div>${0}</div>\n    );\n  } \n\n}\n\nexport {${1:ComponentName}}"
+		],
+		"description": "React`s named default class template"
+	},
+	"classForReact-Browser": {
+		"prefix": "evoClassForReact-Browser",
+		"body": [
+			"const ${1:ComponentName} = React.createClass({\n\n  render() {\n    return (\n      <div>${0}</div>\n    );\n  }\n})"
+		],
+		"description": "React`s browser component"
+	}
+	/******** Import Template ********/
+	,
+	"import": {
+		"prefix": "evoImport",
+		"body": [
+			"import ${1:name} from '${0}';\n"
+		],
+		"description": "Template of Import"
+	}
+	,
+	"importReact": {
+		"prefix": "evoImportReact",
+		"body": [
+			"import React from 'react';\n"
+		],
+		"description": "Template of Import React"
+	},
+	"importReactDom": {
+		"prefix": "evoImportReactDom",
+		"body": [
+			"import ReactDOM from 'react-dom';\n"
+		],
+		"description": "Template of Import ReactDOM"
+	},
+	"importReactCustomComponent": {
+		"prefix": "evoImportReactCustomComponent",
+		"body": [
+			"import ${1:Name} from './${0:components}/${1:Name}';\n"
+		],
+		"description": "Template of Import React Custom Component"
+	},
+	"importCSS": {
+		"prefix": "evoImportCSS",
+		"body": [
+			"import './${0:CSSFileName}.css';\n"
+		],
+		"description": "Template of Import CSS"
+	},
+	"require": {
+		"prefix": "evoRequire",
+		"body": [
+			"const ${1} = require('${2}')\n"
+		],
+		"description": "Template of Import CSS"
+	}
+	/******** Function Template ********/
+	,
+	"function": {
+		"prefix": "evoFunction",
+		"body": [
+			"function ${1:funcName}(${2:params}) {\n  ${0}\n}"
+		],
+		"description": "Template of function"
+	}
+	/******** For Template ********/
+	,
+	"for": {
+		"prefix": "evoFor",
+		"body": [
+			"for(let i = 0; i < ${1: length}; i++){\n  ${0: forBody}\n}"
+		],
+		"description": "Template of for"
+	}
+
+	// Error 
+	,
+	"error": {
+		"prefix": "evoError",
+		"body": [
+			"throw new Error('${0:msg}');"
+		],
+		"description": "Template of Error"
+	}
+  
+	/********* PropTypes *******************/
+	,
+	"propTypes-string-isRequired": {
+		"prefix": "evoProp-string-isRequired",
+		"body": [
+			"React.PropTypes.string.isRequired"
+		],
+		"description": "React.PropTypes.string.isRequired"
+	},
+	"propTypes-string": {
+		"prefix": "evoProp-string",
+		"body": [
+			"React.PropTypes.string"
+		],
+		"description": "React.PropTypes.string"
+	},
+	"propTypes-array": {
+		"prefix": "evoProp-array",
+		"body": [
+			"React.PropTypes.array"
+		],
+		"description": "React.PropTypes.array"
+	},
+	"propTypes-bool": {
+		"prefix": "evoProp-bool",
+		"body": [
+			"React.PropTypes.bool"
+		],
+		"description": "React.PropTypes.bool"
+	},
+	"propTypes-func": {
+		"prefix": "evoProp-func",
+		"body": [
+			"React.PropTypes.func"
+		],
+		"description": "React.PropTypes.func"
+	},
+	"propTypes-number": {
+		"prefix": "evoProp-number",
+		"body": [
+			"React.PropTypes.number"
+		],
+		"description": "React.PropTypes.number"
+	},
+	"propTypes-object": {
+		"prefix": "evoProp-object",
+		"body": [
+			"React.PropTypes.object"
+		],
+		"description": "React.PropTypes.object"
+	},
+	"propTypes-symbol": {
+		"prefix": "evoProp-symbol",
+		"body": [
+			"React.PropTypes.symbol"
+		],
+		"description": "React.PropTypes.symbol"
+	}
+
+}
